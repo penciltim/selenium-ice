@@ -66,7 +66,7 @@ namespace BHOBrowserAutomationHelper
         IHTMLWindow2 window;
         IExpando winExpando;
 
-        public void OnDocumentComplete(object pDisp, ref object URL)
+        public void OnDownloadComplete()
         {
             document = webBrowser.Document as HTMLDocument;
             window = document.parentWindow as IHTMLWindow2;
@@ -120,11 +120,11 @@ namespace BHOBrowserAutomationHelper
             if (site != null)
             {
                 webBrowser = (WebBrowser)site;
-                webBrowser.DocumentComplete += new DWebBrowserEvents2_DocumentCompleteEventHandler(this.OnDocumentComplete);
+                webBrowser.DownloadComplete += new DWebBrowserEvents2_DownloadCompleteEventHandler(this.OnDownloadComplete);
             }
             else
             {
-                webBrowser.DocumentComplete -= new DWebBrowserEvents2_DocumentCompleteEventHandler(this.OnDocumentComplete);
+                webBrowser.DownloadComplete -= new DWebBrowserEvents2_DownloadCompleteEventHandler(this.OnDownloadComplete);
                 webBrowser = null;
             }
 
