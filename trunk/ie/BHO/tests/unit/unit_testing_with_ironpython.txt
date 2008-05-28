@@ -1,0 +1,31 @@
+
+c:\projects\ice>c:\applications\IronPython-1.1.1\ipy.exe
+
+# Add the location of our compiled code to Python's module search path
+>>> import nt
+>>> code_location = nt.getcwd() + "\\ie\\BHO\\bin\\Release"
+>>> import sys
+>>> sys.path.append(code_location)
+
+    # Some setup required for interop with .Net assemblies...
+>>> import clr
+>>> clr.AddReference("BHOSeleniumIce")
+
+    # Finally import our code
+>>> import BHOSeleniumIce as ice
+
+    # A dummy web browser object, ScriptableObject requires it.
+>>> clr.AddReference("Interop.SHDocVW")
+>>> import SHDocVw
+>>> webbrowser = SHDocVw.WebBrowserClass()
+
+
+    # Create a new "ScriptableObject"
+>>> so = ice.ScriptableObject(webbrowser)
+>>> so.helloWorld()
+
+
+# Without mocking, a actual popup message box appears on the screen
+
+
+# TODO: figure out out to mock out the message box, and verify the message directly
