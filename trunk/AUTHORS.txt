@@ -1,0 +1,10 @@
+AUTHORS.txt for Selenium Ice
+
+Ice - "cool" extensions for Selenium
+
+---------------------------------------------------
+Jason Huggins, Google, Inc.
+Adil Lotia, Google, Inc.
+
+BHO template code: Jia Chen
+http://www.codeproject.com/KB/cs/Attach_BHO_with_C_.aspx
