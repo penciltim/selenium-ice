@@ -181,7 +181,6 @@ class Dialog:
 if __name__ == '__main__':
     browser = Browser()
     browser.goto("http://localhost:8000/bho-tests.html")
-    browser.script("document.getElementById('set-file-field').click()")  
     browser.script("document.getElementById('say-hello').click()")      
     browser.script("document.getElementById('show-message').click()") 
     browser.quit()
