@@ -6,6 +6,7 @@ namespace BHOSeleniumIce
     [
     ComVisible(true),
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown),
+    // Internet Explorer's GUID - do not modify/replace.
     Guid("FC4801A3-2BA9-11CF-A229-00AA003D7352")
     ]
     public interface IObjectWithSite
