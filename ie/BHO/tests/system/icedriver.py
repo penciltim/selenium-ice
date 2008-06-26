@@ -19,6 +19,10 @@ TODO:
   
 * Move default dialog action settings into BHO and out of the Python code.  
 
+* Testing: test all combinations of dialog logging and actions
+
+* Support more unexpected dialogs besides "alert".
+
 """
 
 settings = {
@@ -187,25 +191,4 @@ if __name__ == '__main__':
     browser.quit()
 
 
-"""
-doctests:
 
->>> from ice_driver import Browser
->>> browser = Browser()
->>> browser.alert("hello")
->>> browser.goto("http://localhost:8000/bho-tests.html")
->>> browser.quit()
-
-"""
-
-"""
-
-alert:
-    1 button - "OK"
-    
-    Things to test:
-    actions - * error, leave dialog up (take no action) 
-              * error, take default action  
-              * log warning, take default action
-              * take default action,                           
-"""
