@@ -184,11 +184,16 @@ class Dialog:
         wga.clickButton(button)
 
 if __name__ == '__main__':
-    browser = Browser()
-    browser.goto("http://localhost:8000/bho-tests.html")
-    browser.script("document.getElementById('say-hello').click()")      
-    browser.script("document.getElementById('show-message').click()") 
-    browser.quit()
+      print """
+  Ice Driver 
+       
+  Usage: 
+    $ python
+    >>> from icedriver import Browser
+    >>> browser = Browser()
+    >>> browser.goto("http://google.com")
+    >>> browser.quit()
+  """    
 
 
 
