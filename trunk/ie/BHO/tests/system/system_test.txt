@@ -1,0 +1,37 @@
+
+Start a web sever:
+
+    >>> import webserve
+    >>> webserve.start()
+
+
+Launch a browser and open the test page:
+
+    >>> from icedriver import Browser
+    >>> b = Browser()
+    >>> b.goto("http://localhost:8080/system/bho-tests.html")
+
+
+An alert should show up, but ice driver should be able to close it:
+
+    >>> b.alert("Hello, Alert!")
+    Warning: Unexpected dialog box!
+
+
+Now call some JavaScript which will test the Ice extension.
+See bho-tests.html to see the exact call.)
+
+    >>> b.script("callShowMessage()")
+    Warning: Unexpected dialog box!
+
+
+Another test of the ice browser extension:
+
+    >>> b.script("callHelloWorld()")
+    Warning: Unexpected dialog box!
+
+
+Cleanup everything up:
+
+    >>> b.quit()
+    >>> webserve.stop()
