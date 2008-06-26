@@ -17,12 +17,13 @@ TODO:
   Otherwise, requests get "stacked" up waiting for the dialog to be closed.
   And we might not want to do some actions if we have to deal with a dialog first.
   
+* Move default dialog action settings into BHO and out of the Python code.  
 
 """
 
 settings = {
     "dialog.all.logging": "Warn",     # "Error" | "Warn" | "None"
-    "dialog.all.action":  "None"         # "OK" | "Cancel" | "Close" | None
+    "dialog.all.action":  "OK"         # "OK" | "Cancel" | "Close" | None
 }
 
 class UnexpectedDialogBox(Exception):
