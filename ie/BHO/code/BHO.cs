@@ -9,12 +9,6 @@ using System.Reflection;
 
 namespace BHOSeleniumIce
 {
-    public static class Win32
-    {
-        [DllImport("user32.dll", SetLastError = true)]
-        public static extern bool SetForegroundWindow(int hWnd);
-    }
-
     [
     ComVisible(true),
     ClassInterface(ClassInterfaceType.None)
@@ -45,22 +39,11 @@ namespace BHOSeleniumIce
             System.Windows.Forms.MessageBox.Show(textToShow, "Microsoft Internet Explorer");
         }
 
-        public void setFileField(String fieldId, String filePath)
-        {
-            IHTMLInputElement fileInputField = (IHTMLInputElement)document.getElementById(fieldId);
-            // TODO - Do more checking to verify SetForegroundWindow worked, 
-            //        and complain if it doesn't.
-            Win32.SetForegroundWindow(webBrowser.HWND);
-            fileInputField.select();
-            System.Windows.Forms.SendKeys.SendWait(filePath);
-        }
-
     }
 
     [
     ComVisible(true),
-    // Replace the following GUID with your own.
-    // Get one at guidgen.com.
+    // A custom GUID for our BHO
     Guid("8a194578-81ea-4850-9911-13ba2d71efbd"),
     ClassInterface(ClassInterfaceType.None)
     ]

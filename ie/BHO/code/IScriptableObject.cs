@@ -10,6 +10,5 @@ namespace BHOSeleniumIce
     {
         void helloWorld();
         void showMessage(String textToShow);
-        void setFileField(String fieldId, String filePath);
     }
 }
