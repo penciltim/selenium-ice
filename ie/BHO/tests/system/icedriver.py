@@ -140,9 +140,9 @@ class Browser:
                 if self.dialog.list() > 0:
                     if self.settings['dialog.all.logging'] == 'Error':
                         raise UnexpectedDialogBox("Error: unexpected dialog box")
-                        #print "Error: Unexpected dialog box"
+                        #print "Error: Unexpected dialog box!"
                     elif self.settings['dialog.all.logging'] == 'Warn':  
-                        print "Warn: Unexpected dialog box"
+                        print "Warning: Unexpected dialog box!"
                     elif self.settings['dialog.all.logging'] == 'None':  
                         pass                       
 
