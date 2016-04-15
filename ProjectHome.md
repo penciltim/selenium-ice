@@ -1,0 +1,1 @@
+Use Ice to assist with web browser test automation tools, like Selenium. Ice provides a C#-based Browser Helper Object (BHO) for Internet Explorer that exposes native code access to JavaScript. Equivalent extensions for Firefox and Safari are planned.
